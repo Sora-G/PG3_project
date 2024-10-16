@@ -87,6 +87,7 @@ void TyouHan()
 		printf("結果　半\n");
 	}
 
+
 	printf("サイコロの出目[%d] [%d]\n", pip[0], pip[1]);
 	printf("サイコロの出目の合計 %d\n", pipTotal);
 }
