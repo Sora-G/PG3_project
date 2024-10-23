@@ -1,7 +1,23 @@
 #include <stdio.h>
 #include <functional>
-#include <Windows.h>
+#include <windows.h>
 #include <time.h>
+
+typedef void (*PFunc)(int*);
+
+//コールバック関数
+void DispResult(int* s)
+{
+	//printf("%d秒待って実行されたよ\n", *s);
+}
+
+void SetTimeOut(PFunc p, int second)
+{
+	//コールバック関数を呼び出す
+	Sleep(second * 1000);
+
+	p(&second);
+}
 
 int main()
 {
