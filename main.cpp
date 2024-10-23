@@ -35,16 +35,8 @@ int main()
 
 	int num = 0;
 
+	printf("丁か半かを選択してください。（丁：０　半：１）\n");
 	scanf_s("%d", &num);
-
-	if (num == 0)
-	{
-		printf("丁を選択\n");
-	}
-	else if (num == 1)
-	{
-		printf("半を選択\n");
-	}
 
 	printf("結果は...\n");
 
