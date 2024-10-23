@@ -33,8 +33,22 @@ int main()
 	//std::function<int(int)> fx = [](int i) {return i + 1; };
 	//auto fx2 = [](int i) {return i + 1; };
 
+	int num = 0;
 
-	std::function<void(void)> tyouhan = []() {
+	scanf_s("%d", &num);
+
+	if (num == 0)
+	{
+		printf("丁を選択\n");
+	}
+	else if (num == 1)
+	{
+		printf("半を選択\n");
+	}
+
+	printf("結果は...\n");
+
+	std::function<void(void)> tyouhan = [=]() {
 		
 		//乱数の初期化
 		unsigned int currentTime = time(nullptr);
@@ -52,9 +66,40 @@ int main()
 			pipTotal += pip[i];
 		}
 
-		printf("%d", pip[0]);
+		if (pipTotal % 2 == 0)
+		{
+			printf("結果：丁\n");
+
+			if (num == 0)
+			{
+				printf("正解\n");
+			}
+			else if (num == 1)
+			{
+				printf("不正解\n");
+			}
+
+		}
+		else if (pipTotal % 2 == 1)
+		{
+			printf("結果：半\n");
+			if (num == 0)
+			{
+				printf("不正解\n");
+			}
+			else if (num == 1)
+			{
+				printf("正解\n");
+			}
+		}
+
+		printf("%d\n", pipTotal);
 	};
 
+	//コールバック関数を使用
+	PFunc p;
+	p = DispResult;
+	SetTimeOut(p, 3);
 
 	tyouhan();
 
