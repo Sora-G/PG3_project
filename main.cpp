@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <functional>
+#include <Windows.h>
+#include <time.h>
 
 int main()
 {
