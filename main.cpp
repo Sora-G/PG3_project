@@ -33,23 +33,19 @@ int main()
 	//std::function<int(int)> fx = [](int i) {return i + 1; };
 	//auto fx2 = [](int i) {return i + 1; };
 
-		//乱数の初期化
-	unsigned int currentTime = time(nullptr);
-	srand(currentTime);
+	std::function<void(void)> tyouhan = []() {
+		
+		const int kDiceNum = 2;
+		int pip[kDiceNum];
+		int pipTotal;
 
-	const int diceNum = 2;//サイコロの個数
-	int pip[diceNum];//サイコロの出目(出目 = pip)
-	int pipTotal = 0;//出目の合計
 
-	//サイコロの出目を決める
-	for (int i = 0; i < diceNum; i++)
-	{
-		pip[i] = rand() % 6;
 
-		pipTotal += pip[i];
-	}
+		printf("%d", kDiceNum);
+	};
 
-	printf("%d  %d  %d", pip[0], pip[1], pipTotal);
+
+	tyouhan();
 
 	return 0;
 }
