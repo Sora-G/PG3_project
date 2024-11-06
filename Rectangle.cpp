@@ -6,5 +6,5 @@ void Rectangle::Size() {
 }
 
 void Rectangle::Draw() {
-	printf("Circle??????=%.1f\n", area);
+	printf("CircleÇÃñ êœ=%.1f\n", area);
 }

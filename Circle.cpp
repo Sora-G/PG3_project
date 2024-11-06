@@ -6,5 +6,5 @@ void Circle::Size() {
 }
 
 void Circle::Draw() {
-	printf("Circle??????=%.1f\n", area);
+	printf("CircleÇÃñ êœ=%.1f\n", area);
 }
