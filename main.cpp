@@ -3,11 +3,12 @@
 #include <iostream>
 #include <vector>
 #include <list>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-	vector<string>studentIDNum{
+	vector<string>studentID{
 		"k022g0108@g.neec.ac.jp","k022g0045@g.neec.ac.jp","k022g0007@g.neec.ac.jp","k022g0015@g.neec.ac.jp","k022g0028@g.neec.ac.jp",
 		"k022g0049@g.neec.ac.jp","k022g0003@g.neec.ac.jp","k022g0044@g.neec.ac.jp","k022g0072@g.neec.ac.jp","k022g0055@g.neec.ac.jp",
 		"k021g1139@g.neec.ac.jp","k021g1485@g.neec.ac.jp","k021g1162@g.neec.ac.jp","k021g1278@g.neec.ac.jp","k020g1229@g.neec.ac.jp",
@@ -33,6 +34,13 @@ int main()
 		"k022g0031@g.neec.ac.jp","k022g0076@g.neec.ac.jp","k022g0002@g.neec.ac.jp","k022g0090@g.neec.ac.jp","k022g0074@g.neec.ac.jp",
 		"k022g0012@g.neec.ac.jp","k022g0001@g.neec.ac.jp"
 	};
+
+	sort(studentID.begin(), studentID.end());
+
+	for (auto itr = studentID.begin(); itr != studentID.end(); ++itr)
+	{
+		std::cout << *itr << "\n";
+	}
 
 	return 0;
 }
